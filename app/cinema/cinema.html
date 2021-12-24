@@ -6,7 +6,7 @@
             </h1>
         </div>
 
-        <div class="calendar-container">
+        <div class="calendar-container" ng-on-wheel="calendarScrollLeft($event)">
             <div class="day-item">
                 <div class="day-name">MON</div>
                 <div class="day-details">
@@ -230,7 +230,7 @@
         </div>
     </div>
 
-    <div class="movies-container">
+    <div class="movies-container" ng-on-wheel="movieScrollLeft($event)">
         <!--        MOVIE 1 -->
         <div class="movie-container">
             <div class="movie-overlay"></div>
@@ -261,7 +261,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
         <!--        MOVIE 2 -->
         <div class="movie-container">
             <div class="movie-overlay"></div>
