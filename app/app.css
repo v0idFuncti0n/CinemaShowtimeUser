@@ -147,10 +147,6 @@ body {
     cursor: pointer;
 }
 
-.movie-img {
-    transition: all .2s ease-in-out;
-}
-
 .movie-overlay:hover ~ .movie-title-container {
     background-color: #fafbfb;
     transition: .2s ease;
