@@ -7,223 +7,17 @@
         </div>
 
         <div class="calendar-container" ng-on-wheel="calendarScrollLeft($event)">
-            <div class="day-item">
-                <div class="day-name">MON</div>
-                <div class="day-details">
-                    <div class="day-number">
-                        30
-                    </div>
-                    <div class="day-month">
-                        nov.
-                    </div>
-                </div>
-            </div>
-            <div class="day-item">
-                <div class="day-name">MON</div>
-                <div class="day-details">
-                    <div class="day-number">
-                        30
-                    </div>
-                    <div class="day-month">
-                        nov.
-                    </div>
-                </div>
-            </div>
-            <div class="day-item">
-                <div class="day-name">MON</div>
-                <div class="day-details">
-                    <div class="day-number">
-                        30
-                    </div>
-                    <div class="day-month">
-                        nov.
-                    </div>
-                </div>
-            </div>
-            <div class="day-item">
-                <div class="day-name">MON</div>
-                <div class="day-details">
-                    <div class="day-number">
-                        30
-                    </div>
-                    <div class="day-month">
-                        nov.
-                    </div>
-                </div>
-            </div>
-            <div class="day-item">
-                <div class="day-name">MON</div>
-                <div class="day-details">
-                    <div class="day-number">
-                        30
-                    </div>
-                    <div class="day-month">
-                        nov.
-                    </div>
-                </div>
-            </div>
-            <div class="day-item">
-                <div class="day-name">MON</div>
-                <div class="day-details">
-                    <div class="day-number">
-                        30
-                    </div>
-                    <div class="day-month">
-                        nov.
-                    </div>
-                </div>
-            </div>
-            <div class="day-item">
-                <div class="day-name">MON</div>
-                <div class="day-details">
-                    <div class="day-number">
-                        30
-                    </div>
-                    <div class="day-month">
-                        nov.
-                    </div>
-                </div>
-            </div>
-            <div class="day-item">
-                <div class="day-name">MON</div>
-                <div class="day-details">
-                    <div class="day-number">
-                        30
-                    </div>
-                    <div class="day-month">
-                        nov.
-                    </div>
-                </div>
-            </div>
-            <div class="day-item">
-                <div class="day-name">MON</div>
-                <div class="day-details">
-                    <div class="day-number">
-                        30
-                    </div>
-                    <div class="day-month">
-                        nov.
-                    </div>
-                </div>
-            </div>
-            <div class="day-item">
-                <div class="day-name">MON</div>
-                <div class="day-details">
-                    <div class="day-number">
-                        30
-                    </div>
-                    <div class="day-month">
-                        nov.
-                    </div>
-                </div>
-            </div>
-            <div class="day-item">
-                <div class="day-name">MON</div>
-                <div class="day-details">
-                    <div class="day-number">
-                        30
-                    </div>
-                    <div class="day-month">
-                        nov.
-                    </div>
-                </div>
-            </div>
-            <div class="day-item">
-                <div class="day-name">MON</div>
-                <div class="day-details">
-                    <div class="day-number">
-                        30
-                    </div>
-                    <div class="day-month">
-                        nov.
-                    </div>
-                </div>
-            </div>
-            <div class="day-item">
-                <div class="day-name">MON</div>
-                <div class="day-details">
-                    <div class="day-number">
-                        30
-                    </div>
-                    <div class="day-month">
-                        nov.
-                    </div>
-                </div>
-            </div>
-            <div class="day-item">
-                <div class="day-name">MON</div>
-                <div class="day-details">
-                    <div class="day-number">
-                        30
-                    </div>
-                    <div class="day-month">
-                        nov.
-                    </div>
-                </div>
-            </div>
-            <div class="day-item">
-                <div class="day-name">MON</div>
-                <div class="day-details">
-                    <div class="day-number">
-                        30
-                    </div>
-                    <div class="day-month">
-                        nov.
-                    </div>
-                </div>
-            </div>
-            <div class="day-item">
-                <div class="day-name">MON</div>
-                <div class="day-details">
-                    <div class="day-number">
-                        30
-                    </div>
-                    <div class="day-month">
-                        nov.
-                    </div>
-                </div>
-            </div>
-            <div class="day-item">
-                <div class="day-name">MON</div>
-                <div class="day-details">
-                    <div class="day-number">
-                        30
-                    </div>
-                    <div class="day-month">
-                        nov.
-                    </div>
-                </div>
-            </div>
-            <div class="day-item">
-                <div class="day-name">MON</div>
-                <div class="day-details">
-                    <div class="day-number">
-                        30
-                    </div>
-                    <div class="day-month">
-                        nov.
-                    </div>
-                </div>
-            </div>
-            <div class="day-item">
-                <div class="day-name">MON</div>
-                <div class="day-details">
-                    <div class="day-number">
-                        30
-                    </div>
-                    <div class="day-month">
-                        nov.
-                    </div>
-                </div>
-            </div>
-            <div class="day-item">
-                <div class="day-name">MON</div>
-                <div class="day-details">
-                    <div class="day-number">
-                        30
-                    </div>
-                    <div class="day-month">
-                        nov.
+            <div ng-repeat="dates in todayDate" class="day-item" ng-click="test(dates)">
+                <!--                        {{dates | date : "EEE, d MMM" }}-->
+                <div class="day-item">
+                    <div class="day-name">{{dates | date: "EEEE" }}  </div>
+                    <div class="day-details">
+                        <div class="day-number" >
+                            {{dates | date: "d" }}
+                        </div>
+                        <div class="day-month">
+                            {{dates | date: "MMM" }}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -261,7 +55,7 @@
                     </div>
                 </div>
             </div>
-        </div >
+        </div>
         <!--        MOVIE 2 -->
         <div class="movie-container">
             <div class="movie-overlay"></div>
