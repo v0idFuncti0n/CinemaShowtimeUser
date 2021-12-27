@@ -24,283 +24,283 @@
         </div>
     </div>
 
-    <div class="movies-container" ng-on-wheel="movieScrollLeft($event)">
+    <div class="movies-container" ng-on-wheel="movieScrollLeft($event)" >
         <!--        MOVIE 1 -->
-        <div class="movie-container">
+        <div class="movie-container" ng-repeat="movie in allMovies">
             <div class="movie-overlay"></div>
-            <img class="movie-img" src="assets/posters/avengers_endgame_ver2.jpg" alt="avengers endgame">
+            <img class="movie-img" src="{{movie.poster}}" alt="avengers endgame">
             <div class="movie-title-container">
                 <div class="movie-title-wrapper">
                     <div class="movie-title">
-                        Avengers Endgame
+                        {{movie.title}}
                     </div>
                     <div class="movie-duration">
-                        1h, 30min
+                        {{movie.durationInMin}}
                     </div>
                 </div>
             </div>
             <div class="movie-sessions-container">
                 <div class="movie-sessions-wrapper">
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
+                    <div class="movie-session-card" ng-repeat="session in movie.sessions">
+                        <span class="movie-session-hour">{{session.startTime}}</span>
                     </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
                 </div>
             </div>
         </div >
-        <!--        MOVIE 2 -->
-        <div class="movie-container">
-            <div class="movie-overlay"></div>
-            <img class="movie-img" src="assets/posters/matrix_resurrections_ver4.jpg" alt="avengers endgame">
-            <div class="movie-title-container">
-                <div class="movie-title-wrapper">
-                    <div class="movie-title">
-                        Avengers Endgame
-                    </div>
-                    <div class="movie-duration">
-                        1h, 30min
-                    </div>
-                </div>
-            </div>
-            <div class="movie-sessions-container">
-                <div class="movie-sessions-wrapper">
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!--        &lt;!&ndash;        MOVIE 2 &ndash;&gt;-->
+<!--        <div class="movie-container">-->
+<!--            <div class="movie-overlay"></div>-->
+<!--            <img class="movie-img" src="assets/posters/matrix_resurrections_ver4.jpg" alt="avengers endgame">-->
+<!--            <div class="movie-title-container">-->
+<!--                <div class="movie-title-wrapper">-->
+<!--                    <div class="movie-title">-->
+<!--                        Avengers Endgame-->
+<!--                    </div>-->
+<!--                    <div class="movie-duration">-->
+<!--                        1h, 30min-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="movie-sessions-container">-->
+<!--                <div class="movie-sessions-wrapper">-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
 
-        <!--        MOVIE 3 -->
-        <div class="movie-container">
-            <div class="movie-overlay"></div>
-            <img class="movie-img" src="assets/posters/rampage.jpg" alt="avengers endgame">
-            <div class="movie-title-container">
-                <div class="movie-title-wrapper">
-                    <div class="movie-title">
-                        Avengers Endgame
-                    </div>
-                    <div class="movie-duration">
-                        1h, 30min
-                    </div>
-                </div>
-            </div>
-            <div class="movie-sessions-container">
-                <div class="movie-sessions-wrapper">
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!--        &lt;!&ndash;        MOVIE 3 &ndash;&gt;-->
+<!--        <div class="movie-container">-->
+<!--            <div class="movie-overlay"></div>-->
+<!--            <img class="movie-img" src="assets/posters/rampage.jpg" alt="avengers endgame">-->
+<!--            <div class="movie-title-container">-->
+<!--                <div class="movie-title-wrapper">-->
+<!--                    <div class="movie-title">-->
+<!--                        Avengers Endgame-->
+<!--                    </div>-->
+<!--                    <div class="movie-duration">-->
+<!--                        1h, 30min-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="movie-sessions-container">-->
+<!--                <div class="movie-sessions-wrapper">-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
 
-        <!--        MOVIE 4 -->
-        <div class="movie-container">
-            <div class="movie-overlay"></div>
-            <img class="movie-img" src="assets/posters/addams_family_two_ver2.jpg" alt="avengers endgame">
-            <div class="movie-title-container">
-                <div class="movie-title-wrapper">
-                    <div class="movie-title">
-                        Avengers Endgame
-                    </div>
-                    <div class="movie-duration">
-                        1h, 30min
-                    </div>
-                </div>
-            </div>
-            <div class="movie-sessions-container">
-                <div class="movie-sessions-wrapper">
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!--        &lt;!&ndash;        MOVIE 4 &ndash;&gt;-->
+<!--        <div class="movie-container">-->
+<!--            <div class="movie-overlay"></div>-->
+<!--            <img class="movie-img" src="assets/posters/addams_family_two_ver2.jpg" alt="avengers endgame">-->
+<!--            <div class="movie-title-container">-->
+<!--                <div class="movie-title-wrapper">-->
+<!--                    <div class="movie-title">-->
+<!--                        Avengers Endgame-->
+<!--                    </div>-->
+<!--                    <div class="movie-duration">-->
+<!--                        1h, 30min-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="movie-sessions-container">-->
+<!--                <div class="movie-sessions-wrapper">-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
 
-        <!--        MOVIE 5 -->
-        <div class="movie-container">
-            <div class="movie-overlay"></div>
-            <img class="movie-img" src="assets/posters/thor.jpg" alt="avengers endgame">
-            <div class="movie-title-container">
-                <div class="movie-title-wrapper">
-                    <div class="movie-title">
-                        Avengers Endgame
-                    </div>
-                    <div class="movie-duration">
-                        1h, 30min
-                    </div>
-                </div>
-            </div>
-            <div class="movie-sessions-container">
-                <div class="movie-sessions-wrapper">
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!--        &lt;!&ndash;        MOVIE 5 &ndash;&gt;-->
+<!--        <div class="movie-container">-->
+<!--            <div class="movie-overlay"></div>-->
+<!--            <img class="movie-img" src="assets/posters/thor.jpg" alt="avengers endgame">-->
+<!--            <div class="movie-title-container">-->
+<!--                <div class="movie-title-wrapper">-->
+<!--                    <div class="movie-title">-->
+<!--                        Avengers Endgame-->
+<!--                    </div>-->
+<!--                    <div class="movie-duration">-->
+<!--                        1h, 30min-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="movie-sessions-container">-->
+<!--                <div class="movie-sessions-wrapper">-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
 
-        <!--        MOVIE 6 -->
-        <div class="movie-container">
-            <div class="movie-overlay"></div>
-            <img class="movie-img" src="assets/posters/spiderman_far_from_home.jpg" alt="avengers endgame">
-            <div class="movie-title-container">
-                <div class="movie-title-wrapper">
-                    <div class="movie-title">
-                        Avengers Endgame
-                    </div>
-                    <div class="movie-duration">
-                        1h, 30min
-                    </div>
-                </div>
-            </div>
-            <div class="movie-sessions-container">
-                <div class="movie-sessions-wrapper">
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!--        &lt;!&ndash;        MOVIE 6 &ndash;&gt;-->
+<!--        <div class="movie-container">-->
+<!--            <div class="movie-overlay"></div>-->
+<!--            <img class="movie-img" src="assets/posters/spiderman_far_from_home.jpg" alt="avengers endgame">-->
+<!--            <div class="movie-title-container">-->
+<!--                <div class="movie-title-wrapper">-->
+<!--                    <div class="movie-title">-->
+<!--                        Avengers Endgame-->
+<!--                    </div>-->
+<!--                    <div class="movie-duration">-->
+<!--                        1h, 30min-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="movie-sessions-container">-->
+<!--                <div class="movie-sessions-wrapper">-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
 
-        <!--        MOVIE 7 -->
-        <div class="movie-container">
-            <div class="movie-overlay"></div>
-            <img class="movie-img" src="assets/posters/jumanji_welcome_to_the_jungle.jpg" alt="avengers endgame">
-            <div class="movie-title-container">
-                <div class="movie-title-wrapper">
-                    <div class="movie-title">
-                        Avengers Endgame
-                    </div>
-                    <div class="movie-duration">
-                        1h, 30min
-                    </div>
-                </div>
-            </div>
-            <div class="movie-sessions-container">
-                <div class="movie-sessions-wrapper">
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                    <div class="movie-session-card">
-                        <span class="movie-session-hour">11:00am</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!--        &lt;!&ndash;        MOVIE 7 &ndash;&gt;-->
+<!--        <div class="movie-container">-->
+<!--            <div class="movie-overlay"></div>-->
+<!--            <img class="movie-img" src="assets/posters/jumanji_welcome_to_the_jungle.jpg" alt="avengers endgame">-->
+<!--            <div class="movie-title-container">-->
+<!--                <div class="movie-title-wrapper">-->
+<!--                    <div class="movie-title">-->
+<!--                        Avengers Endgame-->
+<!--                    </div>-->
+<!--                    <div class="movie-duration">-->
+<!--                        1h, 30min-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="movie-sessions-container">-->
+<!--                <div class="movie-sessions-wrapper">-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                    <div class="movie-session-card">-->
+<!--                        <span class="movie-session-hour">11:00am</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
 
     </div>
 </div>

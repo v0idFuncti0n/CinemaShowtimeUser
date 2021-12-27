@@ -9,7 +9,7 @@ angular.module('myApp.cinema', ['ngRoute'])
   });
 }])
 
-.controller('CinemaCtrl', ["$scope", function($scope) {
+.controller('CinemaCtrl', ["$scope","$http", function($scope,$http) {
     let movieContainer = angular.element(document.querySelector(".movies-container"))[0];
     let calendarContainer = angular.element(document.querySelector(".calendar-container"))[0];
     $scope.calendarScrollLeft = function ($event) {
@@ -23,6 +23,8 @@ angular.module('myApp.cinema', ['ngRoute'])
     };
 
     $scope.todayDate = [];
+    //to get Movies
+    $scope.allMovies = [];
 
     $scope.getDays = function (){
         var tempDate = [];
@@ -41,7 +43,19 @@ angular.module('myApp.cinema', ['ngRoute'])
         var sentDate = new Date(date);
         var dateString = sentDate.getFullYear() + "-" + (sentDate.getMonth() + 1) +"-" + sentDate.getDate();
         // use dateString to send request from the API ( get movieByDate)
+        $http.get("http://localhost:8080/api/movies/byDate/"+ dateString)
+            .then(function success(response){
+                $scope.allMovies = response.data;
+                console.log(response.data);
+
+            },function error(response){
+                console.log(response);
+            });
+
 
         console.log(dateString);
     };
+
+
+
 }]);
