@@ -78,6 +78,11 @@ body {
     cursor: pointer;
 }
 
+.day-item.active > .day-details {
+    color: #546ecb;
+    background-color: #fafbfb;
+}
+
 .day-name {
     display: flex;
     justify-content: center;
